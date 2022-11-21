@@ -2,6 +2,8 @@
 
 This is a library with very fast implementations of numerical math functions.
 
+PyPI: https://pypi.org/project/mathfn/
+
 ## Example in CPython
 
 To run an example in regular CPython, install LPython so that `lpython` is in
