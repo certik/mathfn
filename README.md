@@ -8,7 +8,7 @@ To run an example in regular CPython, install LPython so that `lpython` is in
 your `$PATH`, then:
 
 ```console
-$ PYTHONPATH=".:$(lpython --get-rtlib-header-dir)/../ltypes" python examples/example_sin.py
+$ PYTHONPATH="src:$(lpython --get-rtlib-header-dir)/../ltypes" python examples/example_sin.py
 1.5
 ```
 
@@ -18,6 +18,6 @@ To run an example in LPython, install LPython so that `lpython` is in
 your `$PATH`, then:
 
 ```console
-$ lpython examples/example_sin.py
+$ (cd src && lpython ../examples/example_sin.py)
 1.50000000000000000e+00
 ```
