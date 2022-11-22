@@ -23,3 +23,11 @@ your `$PATH`, then:
 $ (cd src && lpython ../examples/example_sin.py)
 1.50000000000000000e+00
 ```
+
+## Upload to PyPI
+
+```
+python setup.py sdist
+pip install twine
+twine upload dist/*
+```
