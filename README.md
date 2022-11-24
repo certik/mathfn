@@ -20,7 +20,7 @@ To run an example in LPython, install LPython so that `lpython` is in
 your `$PATH`, then:
 
 ```console
-$ (cd src && lpython ../examples/example_sin.py)
+$ lpython -I src examples/example_sin.py
 1.50000000000000000e+00
 ```
 
