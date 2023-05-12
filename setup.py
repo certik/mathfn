@@ -12,5 +12,6 @@ setup(
     url='https://github.com/certik/mathfn',
     keywords='fast math functions lpython',
     install_requires=[
+        "lpython_emulation==0.0.1.3",
       ],
 )
