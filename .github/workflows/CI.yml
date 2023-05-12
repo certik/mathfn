@@ -47,6 +47,7 @@ jobs:
             git clone https://github.com/lcompilers/lpython.git
             cd lpython
             git checkout v0.14.0
+            export WIN=0
             xonsh ci/build.xsh
             cd ..
 
