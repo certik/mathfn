@@ -46,12 +46,14 @@ jobs:
         run: |
             git clone https://github.com/lcompilers/lpython.git
             cd lpython
-            git checkout v0.6.0
+            git checkout v0.14.0
+            export WIN=0
             xonsh ci/build.xsh
             cd ..
 
       - name: Test (Linux / macOS)
         shell: bash -l {0}
         run: |
-            PYTHONPATH="src:$(lpython --get-rtlib-header-dir)/../ltypes" python examples/example_sin.py
-            (cd src && lpython ../examples/example_sin.py)
+            lpython examples/example_sin.py -Isrc
+            pip install lpython_emulation==0.0.1.3
+            PYTHONPATH="src:$PYTHONPATH" python examples/example_sin.py
