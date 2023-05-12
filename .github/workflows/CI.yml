@@ -54,5 +54,6 @@ jobs:
       - name: Test (Linux / macOS)
         shell: bash -l {0}
         run: |
-            PYTHONPATH="src:$(lpython --get-rtl-dir)/lpython" python examples/example_sin.py
             lpython examples/example_sin.py -Isrc
+            pip install lpython_emulation==0.0.1.3
+            PYTHONPATH="src:$PYTHONPATH" python examples/example_sin.py
